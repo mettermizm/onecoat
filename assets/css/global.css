@@ -1,0 +1,36 @@
+ul {
+  display: flex;
+  list-style: none;
+  margin-top: 56px;
+  margin-bottom: 0;
+}
+
+ul li a {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500; /* medium */
+  font-size: 14px;
+  line-height: 19px;
+  font-family: 'Futura PT', sans-serif;
+  letter-spacing: 2.8px;
+  color: #000000;
+  opacity: 1;
+  text-decoration: none;
+  margin-right: 90px;
+}
+
+ul li a:hover {
+  text-align: left;
+  font-weight: bold; /* bold */
+  font-family: 'Futura PT', sans-serif;
+}
+
+ul li a.active {
+  font-weight: bold; /* Aktif sayfayı vurgula */
+}
+
+.logo {
+  margin-top: 31px;
+  float: right;
+  margin-right: 107px;
+}
