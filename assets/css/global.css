@@ -1,11 +1,37 @@
+@font-face {
+  font-family: 'Helvetica Neue';
+  src:
+    url('~/assets/fonts/helveticaneue-thin.woff2') format('woff2'),
+    url('~/assets/fonts/helveticaneue-thin.woff') format('woff');
+  font-weight: 100; /* Ultra Light */
+  font-style: normal;
+}
+
+/* Eklediğiniz diğer font ağırlıkları için benzer kurallar ekleyin */
+@font-face {
+  font-family: 'Helvetica Neue';
+  src:
+    url('~/assets/fonts/helveticaneue-thin-Bold.woff2') format('woff2'),
+    url('~/assets/fonts/helveticaneue-thin-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
 ul {
   display: flex;
   list-style: none;
   margin-top: 56px;
   margin-bottom: 0;
+  padding: 0;
+  width: 40%;
+}
+
+ul li {
+  flex: 1; /* Her bir li eşit genişlikte olacak şekilde ayarlanır */
 }
 
 ul li a {
+  display: block; /* Block seviyesinde öğe yaparak genişlik almasını sağlar */
   text-align: center;
   font-style: normal;
   font-weight: 500; /* medium */
@@ -16,21 +42,53 @@ ul li a {
   color: #000000;
   opacity: 1;
   text-decoration: none;
-  margin-right: 90px;
+  padding: 10px 0; /* Dikey boşluk ekler */
 }
 
-ul li a:hover {
-  text-align: left;
+ul li a:hover,
+ul li a.active {
+  text-align: center;
   font-weight: bold; /* bold */
   font-family: 'Futura PT', sans-serif;
-}
-
-ul li a.active {
-  font-weight: bold; /* Aktif sayfayı vurgula */
 }
 
 .logo {
   margin-top: 31px;
   float: right;
-  margin-right: 107px;
+  margin-right: 0;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Sağa yasla */
+  border-bottom: 1px solid #000;
+  padding-bottom: 8px;
+  margin-top: 9rem; /* Yukarıda biraz boşluk bırak */
+}
+
+.search-icon {
+  margin-right: 8px; /* İkon ile input arasındaki boşluk */
+  width: 20px; /* İkon boyutu */
+  height: 20px; /* İkon boyutu */
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-size: 16px; /* Yazı boyutu */
+  font-family: Arial, sans-serif; /* Yazı tipi */
+  flex: 1; /* Genişliği doldur */
+}
+
+.large-text {
+  text-align: left;
+  font-style: normal;
+  font-weight: 100; /* Ultra Light */
+  font-size: 302px;
+  line-height: 365px;
+  font-family: 'Helvetica Neue', sans-serif; /* Alternatif font ailesi */
+  letter-spacing: -18.12px;
+  color: #0e112c;
+  opacity: 1;
 }

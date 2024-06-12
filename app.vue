@@ -13,7 +13,6 @@
           <li><NuxtLink to="/faq" active-class="active">faq</NuxtLink></li>
         </ul>
       </nav>
-      <Logo />
     </header>
 
     <NuxtRouteAnnouncer />
