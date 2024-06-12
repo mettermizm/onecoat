@@ -19,6 +19,10 @@
             application. Crafted from 100% natural ingredients, it
           </p>
         </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <Before />
+        </div>
       </div>
     </div>
   </div>
