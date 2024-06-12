@@ -5,15 +5,9 @@
 
       <div class="gallery">
         <div class="gallery__resize">
-          <img
-            src="~/assets/img/b1.png"
-            alt=""
-            class="img img-before blend-mode-luminosity"
-          />
+          <img src="~/assets/img/BW.jpg" alt="" class="img img-before" />
         </div>
-        <div id="myDIV">
-          <img src="~/assets/img/b1.png" alt="" class="img img-after" />
-        </div>
+        <img src="~/assets/img/b1.png" alt="" class="img img-after" />
       </div>
     </div>
   </div>
@@ -25,8 +19,6 @@ import { onMounted } from 'vue'
 onMounted(() => {
   const gallery = document.querySelector('.gallery')
   const galleryResize = document.querySelector('.gallery__resize')
-  const before = document.querySelector('#before')
-  const after = document.querySelector('#after')
 
   gallery.addEventListener('mousemove', (event) => {
     let x = event.offsetX
@@ -34,17 +26,14 @@ onMounted(() => {
     galleryResize.classList.remove('tr')
   })
 
-  // Diğer fonksiyonları da buraya taşıyabilirsiniz.
+  gallery.addEventListener('mouseleave', () => {
+    galleryResize.classList.add('tr')
+    galleryResize.style.width = '50%'
+  })
 })
 </script>
 
 <style scoped>
-#myDIV {
-  background: white;
-}
-#myDIV img {
-  mix-blend-mode: luminosity;
-}
 .slider-wrapper {
   width: 100%;
   padding: 0;
