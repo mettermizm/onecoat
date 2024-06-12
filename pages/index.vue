@@ -145,9 +145,6 @@
 .urun_wrap .urun_grid .gorsel {
   text-align: center;
 }
-.urun_wrap .urun_grid .gorsel img {
-}
-
 .skils_wrap {
   margin: 20px 0px;
 }
